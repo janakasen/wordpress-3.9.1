@@ -16,16 +16,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'database_name_here');
+define('DB_NAME', '<%= metadata["dbinfo"]["dbname"] %>');
 
 /** MySQL database username */
-define('DB_USER', 'username_here');
+define('DB_USER', '<%= metadata["dbinfo"]["dbuser"] %>');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'password_here');
+define('DB_PASSWORD', '<%= metadata["dbinfo"]["dbpass"] %>');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', '<%= metadata["dbinfo"]["dbhost"] %>');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -42,14 +42,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('AUTH_KEY',         '<%= SecureRandom.hex %>');
+define('SECURE_AUTH_KEY',  '<%= SecureRandom.hex %>');
+define('LOGGED_IN_KEY',    '<%= SecureRandom.hex %>');
+define('NONCE_KEY',        '<%= SecureRandom.hex %>');
+define('AUTH_SALT',        '<%= SecureRandom.hex %>');
+define('SECURE_AUTH_SALT', '<%= SecureRandom.hex %>');
+define('LOGGED_IN_SALT',   '<%= SecureRandom.hex %>');
+define('NONCE_SALT',       '<%= SecureRandom.hex %>');
 
 /**#@-*/
 
